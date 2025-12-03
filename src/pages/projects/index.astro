@@ -2,14 +2,48 @@
 // Components
 // - Layout
 import Layout from '../../layouts/Layout.astro'
+// - UI
+import Hero from '../../components/blocks/hero/PageHeader.astro'
+import Section from '../../components/ui/Section.astro'
+import Row from '../../components/ui/Row.astro'
+import Col from '../../components/ui/Col.astro'
+import Spacer from '../../components/ui/Spacer.astro'
+import Button from '../../components/ui/Button.astro'
+import { Icon } from 'astro-icon/components'
 
 // - SEO
 const SEO = {
 	title: 'Projects - FOSSIA',
 	description:
-		'Explore the projects done by FOSSIA -- from software to educational resources related to communities and inclusion and accessibility.'
+		'Explore the projects done by FOSSIA - from software to educational resources related to communities and inclusion and accessibility.'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
+	<Hero title={SEO.title} text={SEO.description} />
+	<!--
+	    The following section is a temporary placeholder for projects
+		TODO: Replace this section with the actual projects as Cards.
+	--->
+	<Section classes="min-h-[40dvh]">
+		<Row flex classes="text-center items-center justify-center max-w-2xl mx-auto">
+			<Col>
+				<h1 class="mt-10 text-center text-2xl font-bold lg:text-3xl">
+					Want to contribute to our community?
+				</h1>
+				<p class="mt-4 text-wrap text-center text-lg">
+					We're actively building exciting projects! Check out our Github repositories to
+					see what we're working on and how you can get involved!
+				</p>
+			</Col>
+			<Row flex classes="text-center items-center justify-center">
+				<Col span="8">
+					<Spacer size="2" desktopSize="4" />
+					<Button link="https://github.com/fossiaorg/">
+						Checkout our Github <Icon name="github" />
+					</Button>
+				</Col>
+			</Row>
+		</Row>
+	</Section>
 </Layout>
