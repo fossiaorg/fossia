@@ -2,6 +2,14 @@
 // Components
 // - Layout
 import Layout from '../../layouts/Layout.astro'
+// - UI
+import Hero from '../../components/blocks/hero/PageHeader.astro'
+import Section from '../../components/ui/Section.astro'
+import Row from '../../components/ui/Row.astro'
+import Col from '../../components/ui/Col.astro'
+import Spacer from '../../components/ui/Spacer.astro'
+import Button from '../../components/ui/Button.astro'
+import { Icon } from 'astro-icon/components'
 
 // - SEO
 const SEO = {
@@ -12,4 +20,25 @@ const SEO = {
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
+	<Hero title={SEO.title} text={SEO.description} />
+	<Section classes="min-h-[40dvh]">
+		<Row flex classes="text-center items-center justify-center max-w-2xl mx-auto">
+			<Col>
+				<h1 class="mt-10 text-center text-2xl font-bold lg:text-3xl">
+					<!--Project title-->
+				</h1>
+				<p class="mt-4 text-wrap text-center text-lg">
+					<!--Project description-->
+				</p>
+			</Col>
+			<Row flex classes="text-center items-center justify-center">
+				<Col span="8">
+					<Spacer size="2" desktopSize="4" />
+					<Button link="">
+						<Icon name="github" />
+					</Button>
+				</Col>
+			</Row>
+		</Row>
+	</Section>
 </Layout>
