@@ -13,6 +13,12 @@
 
 // Components
 // - UI
+// Data
+//
+// Header - Navigation bar
+//
+
+// Components
 import { Icon } from 'astro-icon/components'
 import Switcher from './ModeSwitcher.astro'
 
@@ -26,7 +32,7 @@ function isActivePath(currentPath: string): boolean {
 	return path === currentPath || path === `${currentPath}/`
 }
 
-// Type assertion for navActions to ensure type safety
+// Type assertion for navActions
 const savedNavActions = navActions.map((action) => ({
 	...action,
 	size: action.size as 'base' | 'lg' | 'sm',
@@ -36,14 +42,15 @@ const savedNavActions = navActions.map((action) => ({
 
 <header class="header">
 	<div class="header__container">
-		<nav aria-label="main navigation" role="navigation" class="header__nav">
+		<nav aria-label="main navigation" class="header__nav">
+			
 			<!-- Logo -->
 			<a href="/" class="header__logo">
 				<img src={logo.src} alt={logo.alt} width="128" height="128" />
 				<span>{logo.text}</span>
 			</a>
 
-			<!-- Menu toggle -->
+			<!-- Mobile menu toggle -->
 			<button
 				id="header-toggle"
 				class="header__toggle"
@@ -58,45 +65,54 @@ const savedNavActions = navActions.map((action) => ({
 			</button>
 
 			<!-- Navigation links -->
-			<ul role="menubar" aria-label="Select page" class="header__menu">
-				{
-					navItems.map((item) => (
-						<li role="none" class="header__menu-item">
-							{!item.submenu ? (
-								<a
-									href={item.link}
-									role="menuitem"
-									class={`header__menu-link ${isActivePath(item.link) ? 'active' : ''}`}
-								>
+			<ul class="header__menu">
+
+				{navItems.map((item) => (
+					<li class="header__menu-item">
+
+						<!-- No submenu -->
+						{!item.submenu && (
+							<button
+								class={`header__menu-link header__menu-button ${isActivePath(item.link) ? 'active' : ''}`}
+							>
+								<a href={item.link}>
 									{item.name}
 								</a>
-							) : (
-								<span
-									role="menuitem"
-									class={`header__menu-link ${isActivePath(item.link) ? 'active' : ''}`}
+							</button>
+						)}
+
+						<!-- With submenu -->
+						{item.submenu && (
+							<>
+								<button
+									class={`header__menu-link header__menu-button ${
+										isActivePath(item.link) ? 'active' : ''
+									}`}
+									aria-haspopup="true"
+									aria-expanded="false"
 								>
 									{item.name}
 									<Icon name="chevron-down" class="header__menu-chevron" />
-								</span>
-							)}
-							{item.submenu && (
-								<ul class="header__submenu">
+								</button>
+
+								<ul class="header__submenu" hidden>
 									{item.submenu.map((subItem) => (
-										<li role="none" class="header__submenu-item">
+										<li class="header__submenu-item">
 											<a
 												href={subItem.link}
-												role="menuitem"
-												class={`header__menu-link ${isActivePath(item.link) ? 'active' : ''}`}
+												class={`header__menu-link ${
+													isActivePath(subItem.link) ? 'active' : ''
+												}`}
 											>
 												{subItem.name}
 											</a>
 										</li>
 									))}
 								</ul>
-							)}
-						</li>
-					))
-				}
+							</>
+						)}
+					</li>
+				))}
 			</ul>
 
 			<!-- Theme Switcher -->
@@ -104,6 +120,18 @@ const savedNavActions = navActions.map((action) => ({
 		</nav>
 	</div>
 </header>
+
+<script>
+	document.querySelectorAll('.header__menu-button').forEach((btn) => {
+		btn.addEventListener('click', () => {
+			const expanded = btn.getAttribute('aria-expanded') === 'true';
+			const submenu = btn.nextElementSibling;
+
+			btn.setAttribute('aria-expanded', String(!expanded));
+			// submenu.hidden = expanded;
+		});
+	});
+</script>
 
 <style>
 	.header {
@@ -131,7 +159,7 @@ const savedNavActions = navActions.map((action) => ({
 		@apply relative flex cursor-pointer flex-col items-stretch lg:flex-row;
 	}
 	.header__menu-link {
-		@apply relative flex items-center gap-1 py-4 transition-colors duration-300 hover:text-primary-500 focus:text-primary-600 focus:outline-none focus-visible:outline-none lg:px-6 [&.active]:text-primary-500;
+		@apply relative flex items-center gap-1 py-4 transition-colors duration-300 hover:text-primary-500 focus:text-primary-600 focus:outline-none focus-visible:outline-none focus:ring-2 focus:ring-primary-500 lg:px-6 [&.active]:text-primary-500;
 	}
 	.header__menu-chevron {
 		@apply h-4 w-4 transition-transform [.header\_\_menu-item.open_&]:rotate-180;
