@@ -1,3 +1,4 @@
+@import './fonts.css';
 /* Layout rules */
 html {
 	@apply scroll-smooth antialiased;
