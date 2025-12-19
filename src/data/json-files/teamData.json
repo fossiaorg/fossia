@@ -48,12 +48,12 @@
         ],
         "links": [
             {
-                "type": "linkedin",
-                "url": "https://www.linkedin.com/in/leka-shree"
-            },
-            {
                 "type": "github",
                 "url": "https://github.com/lekashree05"
+            },
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/leka-shree"
             }
         ]
     },

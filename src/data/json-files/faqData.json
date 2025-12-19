@@ -7,37 +7,37 @@
   },
   {
     "question": "What does the name 'FOSSIA' mean?",
-    "reply": "'FOSS' refers to Free and Open Source Software, but is not limited to software. As in, it encompasses libre hardware, community, libre creations (design, art, and more). 'IA' refers to inclusion and accessibility, representing our community's focus on stengthening diverse participation and accessibility in Indian FOSS ecosystem.",
+    "reply": "'FOSS' refers to Free and Open Source Software, but is not limited to software. As in, it encompasses libre hardware, community, libre creations (design, art, and more). 'IA' refers to inclusion and accessibility, representing our community's focus on stengthening diverse participation and accessibility in Indian free software ecosystem.",
     "category": "about",
     "open": false
   },
   {
     "question": "What does 'women-centric' mean?",
-    "reply": "FOSSIA is led and primarily focused on women, creating a supportive space for their growth in the FOSS ecosystem. However, it encourages men and non-binary individuals to join as allies, contribute knowledge, mentor members, and support community activities.",
+    "reply": "FOSSIA is led and primarily focused on women, creating a supportive space for their growth in the free software ecosystem. However, it encourages men and non-binary individuals to join as allies, contribute knowledge, mentor members, and support community activities.",
     "category": "about",
     "open": false
   },
   {
     "question": "Why create another women-centric community when others like Google Women Techmakers or LinuxChix exist?",
-    "reply": "While communities like Google Women Techmakers and LinuxChix do great work, their focus differs:\n\n- Google Women Techmakers is not FOSS-centric.\n- LinuxChix India chapter has had an inactive presence for 6 years and is not entirely about the FOSS ecosystem.\n\nFOSSIA aims to bridge these gaps, drawing inspiration from both along with organizations such as FOSS United, thus aligning with the FOSS movement.",
+    "reply": "While communities like Google Women Techmakers and LinuxChix do great work, their focus differs:\n\n- Google Women Techmakers is not free software centric.\n- LinuxChix India chapter has had an inactive presence for 6 years and is not entirely about the free software ecosystem.\n\nFOSSIA aims to bridge these gaps, drawing inspiration from both along with organizations such as FOSS United, thus aligning with the free software movement.",
     "category": "about",
     "open": false
   },
   {
     "question": "Is FOSSIA a women-only community?",
-    "reply": "No. FOSSIA is women-centric, not women-exclusive. It prioritizes women’s growth in the FOSS space but values collaboration from all individuals who believe in equality, open knowledge sharing, and community-driven development.",
+    "reply": "No. FOSSIA is women-centric, not women-exclusive. It prioritizes women’s growth in the free software space but values collaboration from all individuals who believe in equality, open knowledge sharing, and community-driven development.",
     "category": "membership",
     "open": false
   },
   {
     "question": "How can I contribute to FOSSIA?",
-    "reply": "You can contribute in a technical manner, helping with libre creatives, mentorship and conducting events to bring in awareness for active development.",
+    "reply": "You can contribute to our projects, help with our design, mentor our contributors and conduct events to bring in awareness regarding free software.",
     "category": "contribution",
     "open": false
   },
   {
     "question": "Is FOSSIA limited to India?",
-    "reply": "FOSSIA aims to promote the growth of FOSS ecosystem in India by creation of a safe and inclusive space for women for improved contribution.",
+    "reply": "FOSSIA aims to promote the growth of the free software ecosystem in India by creation of a safe and inclusive space for women for improved contribution.",
     "category": "membership",
     "open": false
   },
@@ -49,7 +49,7 @@
   },
   {
     "question": "Should I be highly skilled to join FOSSIA?",
-    "reply": "FOSSIA is an inviting space for you to learn and contribute. Anyone interested in contributing or learning about FOSS, supporting women in tech, and engaging in community activities can participate.",
+    "reply": "FOSSIA is an inviting space for you to learn and contribute. Anyone interested in contributing or learning about free software, supporting women in tech, and engaging in community activities can participate.",
     "category": "membership",
     "open": false
   },
@@ -67,7 +67,7 @@
   },
   {
     "question": "Does FOSSIA collaborate with other organizations?",
-    "reply": "Yes, FOSSIA actively partners with FOSS organizations and universities to raise awareness about FOSS and organize collaborative initiatives.",
+    "reply": "Yes, FOSSIA actively partners with free software organizations and universities to raise awareness about free software and organize collaborative initiatives.",
     "category": "collaboration",
     "open": false
   },

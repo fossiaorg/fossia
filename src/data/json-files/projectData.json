@@ -1,0 +1,10 @@
+[
+    {
+        "id": "transcribeit",
+        "name": "TranscribeIt",
+        "description": "Free software transcription and description application for local and online multimedia content for improving accessibility.",
+        "blog": "https://fossia.org/blog/givingtuesday-with-transcribeit",
+        "repo": "https://github.com/fossiaorg/transcribeit",
+        "docs": "https://docs.transcribeit.fossia.org"
+    }
+]
