@@ -10,6 +10,7 @@ import Col from '../../components/ui/Col.astro'
 import Spacer from '../../components/ui/Spacer.astro'
 import Button from '../../components/ui/Button.astro'
 import { Icon } from 'astro-icon/components'
+import Card from '../../components/ui/cards/partials/Card.astro'
 
 // - SEO
 const SEO = {
@@ -17,28 +18,30 @@ const SEO = {
 	description:
 		'Explore the projects done by FOSSIA -- from software to educational resources related to communities and inclusion and accessibility.'
 }
+
+import projects from '../../data/json-files/projectData.json'
+import ProjectCard from '../../components/ui/cards/ProjectCard.astro'
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-	<Hero title={SEO.title} text={SEO.description} />
-	<Section classes="min-h-[40dvh]">
-		<Row flex classes="text-center items-center justify-center max-w-2xl mx-auto">
-			<Col>
-				<h1 class="mt-10 text-center text-2xl font-bold lg:text-3xl">
-					<!--Project title-->
-				</h1>
-				<p class="mt-4 text-wrap text-center text-lg">
-					<!--Project description-->
-				</p>
-			</Col>
-			<Row flex classes="text-center items-center justify-center">
-				<Col span="8">
-					<Spacer size="2" desktopSize="4" />
-					<Button link="">
-						<Icon name="github" />
-					</Button>
-				</Col>
-			</Row>
-		</Row>
+	<Hero
+		title="Projects"
+		text="We work on impactful community projects focused on inclusion and accessibility"
+	/>
+	<Section>
+		{
+			projects.map((project) => {
+				return (
+					<ProjectCard
+						name={project.name}
+						id={project.id}
+						description={project.description}
+						docs={project.docs}
+						repo={project.repo}
+						blog={project.blog}
+					/>
+				)
+			})
+		}
 	</Section>
 </Layout>

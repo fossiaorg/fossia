@@ -1,0 +1,46 @@
+---
+// Project Card
+// ------------
+// Components
+// - UI
+import Card from './partials/Card.astro'
+import { Icon } from 'astro-icon/components'
+import Button from '../Button.astro'
+import Col from '../Col.astro'
+import { propsToFilename } from 'astro/assets/utils'
+
+// Props
+type Props = {
+	name: string
+	description: string
+	blog: string
+	repo: string
+	docs: string
+	id: string
+}
+
+const { name, description, blog, repo, docs, id } = Astro.props
+---
+
+<Card
+	classes="flex flex-row text-left items-baseline max-w-6xl mx-auto bg-neutral-50 dark:bg-neutral-900  border border-neutral-100 dark:border-neutral-800 rounded-lg p-4 m-4"
+>
+	<Col>
+		<h1 class="mt-10 text-left text-2xl font-bold lg:text-3xl">{name}</h1>
+		<p class="mt-4 text-wrap text-left text-lg">
+			{description}
+		</p>
+		<Button link={blog} classes="w-44 m-2">
+			<Icon name="document-text" />
+			Blog
+		</Button>
+		<Button link={repo} classes="w-44 m-2">
+			<Icon name="github" />
+			Source Code
+		</Button>
+		<Button link={docs} classes="w-44 m-2">
+			<Icon name="book" />
+			Documentation
+		</Button>
+	</Col>
+</Card>
