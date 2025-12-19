@@ -83,8 +83,8 @@ export const footerNavigationData: FooterData = {
 					subCategoryLink: '/resources/get-involved'
 				},
 				{
-					subCategory: 'Telegram',
-					subCategoryLink: 'https://t.me/fossiaorg'
+					subCategory: 'Matrix',
+					subCategoryLink: 'https://matrix.to/#/#fossiaorg:matrix.org'
 				},
 				{
 					subCategory: 'GitHub',

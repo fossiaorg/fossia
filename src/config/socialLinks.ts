@@ -10,9 +10,9 @@ export interface SocialLink {
 
 export const socialLinks: SocialLink[] = [
 	{
-		name: 'telegram',
-		link: 'https://t.me/fossiaorg',
-		icon: 'telegram'
+		name: 'matrix',
+		link: 'https://matrix.to/#/#fossiaorg:matrix.org',
+		icon: 'matrix'
 	},
 	{
 		name: 'github',
