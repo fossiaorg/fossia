@@ -1,0 +1,28 @@
+---
+// Components
+// - Layout
+import Layout from '../../layouts/Layout.astro'
+// - UI
+import Hero from '../../components/blocks/hero/PageHeader.astro'
+import Section from '../../components/ui/Section.astro'
+
+// - SEO
+const SEO = {
+	title: 'Events - FOSSIA',
+	description:
+		'Explore the events conducted by FOSSIA for free software, inclusion and accessibility.'
+}
+
+import events from '../../data/json-files/eventData.json'
+import ProjectCard from '../../components/ui/cards/ProjectCard.astro'
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero
+		title="Events"
+		text="Explore our events related to free software, inclusion and accessibility"
+	/>
+	<Section>
+		<h2 class="text-center">Looks like there are no events happening now</h2>
+	</Section>
+</Layout>

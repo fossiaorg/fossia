@@ -1,0 +1,25 @@
+---
+// Components
+// - Layout
+import Layout from '../../layouts/Layout.astro'
+// - UI
+import Hero from '../../components/blocks/hero/PageHeader.astro'
+import Section from '../../components/ui/Section.astro'
+
+// - SEO
+const SEO = {
+	title: 'Mentorship - FOSSIA',
+	description:
+		'Explore mentorship cohorts organized by FOSSIA.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero
+		title="Mentorship"
+		text="Explore our mentorship cohorts for contributing to our projects"
+	/>
+	<Section>
+		<h2 class="text-center">Looks like there are no cohors happening now</h2>
+	</Section>
+</Layout>

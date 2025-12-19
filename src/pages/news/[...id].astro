@@ -1,0 +1,25 @@
+---
+// News Page
+// ------------
+// Description: The news page.
+// 
+// Components
+// - Layout
+import Layout from '../../layouts/PostLayout.astro'
+
+// Data
+import { getCollection, render  } from 'astro:content'
+export async function getStaticPaths() {
+	const blogEntries = await getCollection('news')
+	return blogEntries.map((entry) => ({
+		params:{ id: decodeURI( entry.id )},
+		props: { entry }
+	}))
+}
+const { entry } = Astro.props
+const { Content } = await render(entry);
+---
+
+<Layout frontmatter={entry.data}>
+	<Content />
+</Layout>
