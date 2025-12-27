@@ -4,10 +4,10 @@ The source code for website of FOSSIA. The website is developed using Astro and 
 
 ## Getting Started
 
-1. Clone the project from GitHub
+1. Clone the project
    
    ```sh
-   git clone https://github.com/fossia-org/fossia
+   git clone https://codeberg.org/fossiaorg/fossia
    cd fossia
    ```
 
@@ -18,7 +18,7 @@ The source code for website of FOSSIA. The website is developed using Astro and 
 
 ## Contributing
 
-For getting started with contribution, check out the [contributing guide](/CONTRIBUTING.md).
+For getting started with contribution, check out the [contributing guide](./CONTRIBUTING.md).
 
 ## License
 
